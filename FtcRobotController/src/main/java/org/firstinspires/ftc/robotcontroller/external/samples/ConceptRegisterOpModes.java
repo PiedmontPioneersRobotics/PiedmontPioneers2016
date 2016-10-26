@@ -81,7 +81,11 @@ public class ConceptRegisterOpModes
     // manager.register("Teleop Tank",            PushbotTeleopTank_Iterative.class);
     // manager.register("Auto Drive Gyro",        PushbotAutoDriveByGyro_Linear.class);
     // manager.register("Auto Drive Encoder",     PushbotAutoDriveByEncoder_Linear.class);
-    // manager.register("Auto Drive Time",        PushbotAutoDriveByTime_Linear.class);
+
+    //  manager.register("Auto Drive Time",        FWDbotAutoDriveByTime_Linear.class);
+      manager.register("FWD Drive TeleOP",        FWDTeleop_Linear.class);
+    //  manager.register("Auto Drive Encoder",     FWDbotAutoDriveByEncoder_Linear.class);
+
     // manager.register("Auto Drive Line",        PushbotAutoDriveToLine_Linear.class);
     // manager.register("K9 Telop",               K9botTeleopTank_Linear.class);
 
@@ -92,13 +96,15 @@ public class ConceptRegisterOpModes
     // manager.register("DIM DIO",                SensorDIO.class);
     // manager.register("HT Color",               SensorHTColor.class);
     // manager.register("LEGO Light",             SensorLEGOLight.class);
-    // manager.register("LEGO Touch",             SensorLEGOTouch.class);
+     manager.register("LEGO Touch",             SensorLEGOTouch.class);
     // manager.register("MR Color",               SensorMRColor.class);
     // manager.register("MR Gyro",                SensorMRGyro.class);
-    // manager.register("MR IR Seeker",           SensorMRIrSeeker.class);
+    // manager.register("MR IR Seeker",           SensorMRIrSeeker.class)
     // manager.register("MR ODS",                 SensorMROpticalDistance.class);
+      manager.register("Line Follower",                 LineFollower.class);
 
-    //  Concept Samples
+
+      //  Concept Samples
     // manager.register("Null Op",                ConceptNullOp.class);
     // manager.register("Compass Calibration",    ConceptCompassCalibration.class);
     // manager.register("DIM as Indicator",       ConceptDIMAsIndicator.class);

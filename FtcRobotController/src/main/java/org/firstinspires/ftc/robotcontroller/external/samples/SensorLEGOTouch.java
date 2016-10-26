@@ -67,9 +67,9 @@ public class SensorLEGOTouch extends LinearOpMode {
 
       // send the info back to driver station using telemetry function.
       if (touchSensor.isPressed())
-        telemetry.addData("Touch", "Is Pressed");
-      else
         telemetry.addData("Touch", "Is Not Pressed");
+      else
+        telemetry.addData("Touch", "Is Pressed");
 
       telemetry.update();
     }

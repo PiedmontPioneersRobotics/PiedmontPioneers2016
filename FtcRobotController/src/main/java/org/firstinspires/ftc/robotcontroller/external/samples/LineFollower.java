@@ -46,15 +46,19 @@ import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
  */
 @TeleOp(name = "Sensor: MR ODS", group = "Sensor")
 @Disabled
-public class SensorMROpticalDistance extends LinearOpMode {
+public class LineFollower extends LinearOpMode {
 
-  OpticalDistanceSensor odsSensor;  // Hardware Device Object
+  OpticalDistanceSensor odsSensorLeft;  // Hardware Device Object
+  OpticalDistanceSensor odsSensorRight;  // Hardware Device Object
+  OpticalDistanceSensor odsSensorCenter;  // Hardware Device Object
 
   @Override
   public void runOpMode() {
 
     // get a reference to our Light Sensor object.
-    odsSensor = hardwareMap.opticalDistanceSensor.get("sensor_ods");
+    odsSensorLeft = hardwareMap.opticalDistanceSensor.get("sensor_ods_left");
+    odsSensorRight = hardwareMap.opticalDistanceSensor.get("sensor_ods_right");
+    odsSensorCenter = hardwareMap.opticalDistanceSensor.get("sensor_ods_center");
 
     // wait for the start button to be pressed.
     waitForStart();
@@ -64,8 +68,8 @@ public class SensorMROpticalDistance extends LinearOpMode {
     while (opModeIsActive()) {
 
       // send the info back to driver station using telemetry function.
-      telemetry.addData("Raw",    odsSensor.getRawLightDetected());
-      telemetry.addData("Normal", odsSensor.getLightDetected());
+      telemetry.addData("Raw",    odsSensorLeft.getRawLightDetected());
+      telemetry.addData("Normal", odsSensorLeft.getLightDetected());
 
       telemetry.update();
     }
