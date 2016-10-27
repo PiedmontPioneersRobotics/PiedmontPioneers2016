@@ -83,8 +83,8 @@ public class ConceptRegisterOpModes
     // manager.register("Auto Drive Encoder",     PushbotAutoDriveByEncoder_Linear.class);
 
     //  manager.register("Auto Drive Time",        FWDbotAutoDriveByTime_Linear.class);
-      manager.register("FWD Drive TeleOP",        FWDTeleop_Linear.class);
-    //  manager.register("Auto Drive Encoder",     FWDbotAutoDriveByEncoder_Linear.class);
+    //  manager.register("FWD Drive TeleOP",        FWDTeleop_Linear.class);
+      manager.register("Auto Drive Encoder",     FWDbotAutoDriveByEncoder_Linear.class);
 
     // manager.register("Auto Drive Line",        PushbotAutoDriveToLine_Linear.class);
     // manager.register("K9 Telop",               K9botTeleopTank_Linear.class);
