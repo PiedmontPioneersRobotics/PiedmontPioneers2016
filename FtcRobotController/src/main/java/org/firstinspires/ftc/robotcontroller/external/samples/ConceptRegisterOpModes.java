@@ -31,14 +31,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
 package org.firstinspires.ftc.robotcontroller.external.samples;
 
-import android.hardware.Sensor;
-import android.util.Log;
-
 import com.qualcomm.robotcore.eventloop.opmode.OpModeManager;
 import com.qualcomm.robotcore.eventloop.opmode.OpModeRegistrar;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-
-import org.firstinspires.ftc.robotcontroller.external.samples.*;
 
 /**
  * This class demonstrates how to manually register opmodes.
@@ -84,9 +78,11 @@ public class ConceptRegisterOpModes
 
     //  manager.register("Auto Drive Time",        FWDbotAutoDriveByTime_Linear.class);
     //  manager.register("FWD Drive TeleOP",        FWDTeleop_Linear.class);
-      manager.register("Auto Drive Encoder",     FWDbotAutoDriveByEncoder_Linear.class);
+    //  manager.register("Auto Drive Encoder",     FWDbotAutoDriveByEncoder_Linear.class);
+    //  manager.register("FWD Drive TeleOP",        FWDTeleop_Linear.class);
 
-    // manager.register("Auto Drive Line",        PushbotAutoDriveToLine_Linear.class);
+
+      // manager.register("Auto Drive Line",        PushbotAutoDriveToLine_Linear.class);
     // manager.register("K9 Telop",               K9botTeleopTank_Linear.class);
 
     // Sensor Samples
@@ -96,12 +92,20 @@ public class ConceptRegisterOpModes
     // manager.register("DIM DIO",                SensorDIO.class);
     // manager.register("HT Color",               SensorHTColor.class);
     // manager.register("LEGO Light",             SensorLEGOLight.class);
-     manager.register("LEGO Touch",             SensorLEGOTouch.class);
+    // manager.register("LEGO Touch",             SensorLEGOTouch.class);
     // manager.register("MR Color",               SensorMRColor.class);
     // manager.register("MR Gyro",                SensorMRGyro.class);
     // manager.register("MR IR Seeker",           SensorMRIrSeeker.class)
     // manager.register("MR ODS",                 SensorMROpticalDistance.class);
-      manager.register("Line Follower",                 LineFollower.class);
+      //manager.register("Line Follower",           LineFollower.class);
+      manager.register("Launcher Bot",            LauncherBotTeleop_Linear.class);
+    //  manager.register("Wander bot",              WANDERMODE.class);
+          manager.register("Auto Drive Encoder",     LauncherbottwoAutoDriveByEncoder_Linear.class);
+      manager.register("Auto Drive Paused",     LauncherbottwoAutoDriveByEncoder_Paused_Linear.class);
+      manager.register("Auto Drive Just Shoot",     LauncherbottwoAutoDriveByEncoder_JustShoot_Linear.class);
+      manager.register("Auto Drive Encoder2",     LauncherbottwoAutoDriveByEncoder2_Linear.class);
+      manager.register("Launcher Bot2",            LauncherBotTeleop2_Linear.class);
+
 
 
       //  Concept Samples
