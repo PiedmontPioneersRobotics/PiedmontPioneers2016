@@ -106,10 +106,11 @@ public class LauncherBotTeleop2_Linear extends LinearOpMode {
             watermillback = gamepad2.left_trigger;
             rubberbandback = gamepad2.left_trigger;
 
-            robot.pitcherMotorright.setPower(1.0);
-            robot.pitcherMotorleft.setPower(1.0);
+            robot.pitcherMotorright.setPower(0.6);
+            robot.pitcherMotorleft.setPower(0.6);
 
             //current_time = System.nanoTime();
+
 
             if (touchSensor.isPressed()) {
                 ballinchute = true;
@@ -149,9 +150,7 @@ public class LauncherBotTeleop2_Linear extends LinearOpMode {
             if (touchSensor.isPressed()) telemetry.addLine("Chute button is pressed");
             else telemetry.addLine("Chute button is NOT pressed");
             telemetry.update();
-
-            // Pause for metronome tick.  40 mS each cycle = update 25 times a second.
-            robot.waitForTick(40);
         }
+
     }
 }
